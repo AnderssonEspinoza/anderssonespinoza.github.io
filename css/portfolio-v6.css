@@ -97,7 +97,8 @@ h1 .ln{display:block;width:fit-content}
 .ar{width:100%;height:auto;margin-top:1rem}.ar rect{fill:rgba(129,140,248,.1);stroke:var(--b);stroke-width:1.5}.ar text{fill:var(--fg);font:500 12px "IBM Plex Mono";text-anchor:middle}.ar path{fill:none;stroke:var(--a);stroke-width:1.5;stroke-dasharray:6 6;animation:ds 1s linear infinite}.ar circle{fill:var(--a)}
 /* registro */
 .lgx{max-width:860px;border:1px solid var(--ln);background:rgba(10,17,40,.55)}
-.ll{display:grid;grid-template-columns:2.6rem 7.5rem 1fr;gap:.8rem;padding:1rem 1rem;border-bottom:1px solid var(--ln);clip-path:inset(0 100% 0 0);transition:clip-path 1s cubic-bezier(.7,0,.2,1);transition-delay:calc(var(--i)*.18s)}.ll:last-child{border-bottom:0}.ll.in{clip-path:inset(0)}
+.ll{display:grid;grid-template-columns:2.6rem 7.5rem 1fr;gap:.8rem;padding:1rem 1rem;border-bottom:1px solid var(--ln);clip-path:none}.ll:last-child{border-bottom:0}.ll.in{animation:record-reveal 1s cubic-bezier(.7,0,.2,1) backwards;animation-delay:calc(var(--i)*.18s)}
+@keyframes record-reveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0)}}
 .ll .n{color:var(--mute);font-size:.8rem;text-align:right}.ll .s{font-size:.8rem;color:var(--ok)}.ll h3{margin:0 0 .3rem;font-size:1.35rem}.ll p{margin:0;color:var(--mute)}
 /* contacto */
 .ct{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
@@ -171,3 +172,11 @@ button:disabled{opacity:.65;cursor:wait}
 @media(max-width:900px){#rail a.n span{font-size:11px}}
 @media(hover:none){.bt:hover{color:var(--fg)}.bt.p:hover{color:var(--bg)}}
 #toast{visibility:hidden}#toast.on{visibility:visible}
+
+.project-status{color:var(--ok);font-size:.8rem;margin:.8rem 0!important}
+.project-links{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}
+.ch em{white-space:normal;max-width:16rem}
+
+.project-flow{display:grid;align-items:center;min-height:130px}
+.project-stack{display:flex;flex-wrap:wrap;gap:.5rem;font-size:.72rem}
+.project-stack span{padding:.25rem .6rem;border:1px solid var(--ln);color:var(--a);animation:fl 4s ease-in-out infinite alternate;animation-delay:calc(var(--n)*.5s)}
