@@ -30,9 +30,9 @@ const BL=["$ ssh andersson@portafolio","autenticando...","acceso concedido ✓"]
 function boot(done){const b=$("#boot"),pt=$("#bp");if(RM){b.remove();done();return}let i=0,j=0;(function t(){if(i>=BL.length){setTimeout(()=>{b.classList.add("out");setTimeout(done,500);setTimeout(()=>b.remove(),1100)},300);return}pt.textContent=BL.slice(0,i).join("\n")+(i?"\n":"")+BL[i].slice(0,++j);if(j>=BL[i].length){i++;j=0;setTimeout(t,170)}else setTimeout(t,26)})()}
 const IO=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");IO.unobserve(x.target)}}),{threshold:.3});
 $$("h2 .rd,.rv,.ll").forEach(e=>IO.observe(e));
-boot(()=>{$$("#h1 .rd").forEach(e=>e.classList.add("in"));const pr=$("#pr"),s=document.createElement("span"),c=document.createElement("i");pr.append(s,c);
+queueMicrotask(()=>boot(()=>{$$("#h1 .rd").forEach(e=>e.classList.add("in"));const pr=$("#pr"),s=document.createElement("span"),c=document.createElement("i");pr.append(s,c);
 RM?(s.textContent='print("Andersson Espinoza")'):type(s,'print("Andersson Espinoza")',55);
-setTimeout(()=>{$("#stt").textContent="identidad verificada";$("#st").classList.add("d")},RM?0:2600);feedStart()});
+setTimeout(()=>{$("#stt").textContent="identidad verificada";$("#st").classList.add("d")},RM?0:2600);feedStart()}));
 /* eventos en vivo (simulados) */
 const EV=[["ok","PERMITIDO","POST /api/login 200 usuario=***"],["ok","PERMITIDO","GET /api/pedidos 200 token=válido"],["bq","BLOQUEADO","A03 inyección SQL  GET /buscar?q=' OR 1=1-- → 403"],["bq","BLOQUEADO","A01 acceso roto  GET /api/admin sin rol → 403"],["al","ALERTA","fuerza bruta: 12 intentos en 30 s desde una IP"],["bq","BLOQUEADO","A03 XSS  POST /comentarios <script> → 400"],["ok","PERMITIDO","GET /api/usuarios/7 200 auditado"],["bq","BLOQUEADO","ruta insegura  GET /../../etc/passwd → 403"],["al","ALERTA","dependencia vulnerable detectada en el build"]];
 const fl=$("#fl");let ei=0;
