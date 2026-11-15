@@ -26,6 +26,19 @@ Revisado en navegador con anchos de 320, 390, 768, 1024 y 1440 píxeles. Se comp
 
 ## Publicación
 
-Repositorio: https://github.com/AnderssonEspinoza/anderssonespinoza.me
+Repositorio, después de cambiar el nombre: https://github.com/AnderssonEspinoza/AnderssonEspinoza.github.io
 
-Dominio configurado en `CNAME`: https://anderssonespinoza.me
+Sitio gratuito, después de configurar GitHub Pages: https://anderssonespinoza.github.io/
+
+## Migración desde el dominio vencido
+
+El dominio de Namecheap `anderssonespinoza.me` dejó de ser necesario para publicar el portafolio. Se eliminó el archivo `CNAME` y las URL canónicas y sociales ahora apuntan a `https://anderssonespinoza.github.io/`.
+
+Pasos pendientes de administración (se realizan en la interfaz de GitHub):
+
+1. En Settings > Pages, eliminar `anderssonespinoza.me` en **Custom domain**, si sigue configurado.
+2. En Settings > General, cambiar el nombre de este repositorio a `AnderssonEspinoza.github.io` (respetando el usuario real de GitHub).
+3. En Settings > Pages, verificar que publique desde `main` / `(root)` y que la dirección final sea `https://anderssonespinoza.github.io/`.
+4. Probar idiomas, enlaces, imágenes, CV y formulario tras la publicación.
+
+No es necesario contratar otro alojamiento ni pagar por un dominio propio.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anderssonespinoza.me/sitemap.xml
+Sitemap: https://anderssonespinoza.github.io/sitemap.xml
